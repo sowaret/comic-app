@@ -1,0 +1,55 @@
+.archive__pages {
+	display: grid;
+	grid-gap: 50px 30px;
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+	margin-top: 40px;
+}
+
+	.archive-page {
+		color: #FFF;
+		font-family: 'roboto slab';
+		text-align: center;
+		text-decoration: none;
+		width: 100%; /* Prevent long titles from changing grid size; make page numbers full width */
+	}
+
+		.archive-page__thumb {
+			background: no-repeat 0 0 / 100px;
+			height: 130px;
+			margin: 0 auto;
+			transition: .3s cubic-bezier(0.16, 1, 0.6, 1);
+			width: 100px;
+		}
+		.archive-page:hover .archive-page__thumb {
+			box-shadow: 0 2px 6px #000;
+			transform: scale(1.05);
+		}
+
+		.archive-page__number {
+			color: #666;
+			display: grid;
+			font-size: .8rem;
+			font-style: italic;
+			grid-gap: 12px;
+			grid-template-columns: 1fr min-content 1fr;
+			margin: 7px 0 10px;
+		}
+		.archive-page__number::after,
+		.archive-page__number::before {
+			background: #333;
+			content: '';
+			height: 1px;
+			margin-top: 7px;
+		}
+
+		.archive-page__title {
+			line-height: 1.5rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.archive-page__date {
+			color: #999;
+			font-size: .8rem;
+			margin-top: 4px;
+		}

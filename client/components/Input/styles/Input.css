@@ -1,0 +1,104 @@
+.input {
+	margin-bottom: 20px;
+	position: relative;
+	white-space: nowrap; /* Keep any placeholder on the same line */
+	width: min-content; /* Constrict focus indicator to input width */
+}
+.input.prefix {
+	background: #383838;
+	display: grid;
+	grid-template-areas: 'label label' 'prefix input';
+	grid-template-columns: min-content min-content;
+	grid-template-rows: 23px 1fr;
+}
+.input.prefix:hover {
+	background: #3A3A3A;
+}
+.input.prefix.focus {
+	background: #3F3F3F;
+}
+.input.wide,
+.input.wide input {
+	width: 100%;
+}
+.input.file {
+	width: 570px;
+}
+.form--center .input {
+	margin: 0 auto 20px;
+}
+
+	.input__label {
+		color: #FFF;
+		cursor: text;
+		display: block;
+		left: 15px;
+		opacity: .6;
+		position: absolute;
+		top: 18px;
+		transition: .17s;
+	}
+	.file .input__label {
+		cursor: pointer;
+		opacity: inherit;
+		position: static;
+	}
+	.has-text .input__label {
+		opacity: .6;
+	}
+	.focus .input__label {
+		color: #FD0;
+		opacity: .9;
+	}
+	:is(.focus, .has-text) .input__label {
+		font-size: .8rem;
+		top: 9px;
+	}
+
+	.input.prefix input,
+	.input__prefix {
+		border-bottom: 1px solid #555;
+	}
+
+	.input__prefix {
+		border-top-left-radius: 4px;
+		color: #AAA;
+		cursor: text;
+		grid-area: prefix;
+		padding: 8px 0 8px 15px;
+	}
+	.input.prefix input:focus,
+	.input.prefix input:focus + .input__prefix {
+		background-color: #3F3F3F;
+		border-color: #FD0;
+	}
+
+	.input.prefix input {
+		border-top-left-radius: 0;
+		grid-area: input;
+		outline: 0;
+		padding-left: 0;
+		padding-top: 9px;
+	}
+
+	.input :is(input, textarea) {
+		padding-left: 15px;
+		padding-top: 28px;
+	}
+
+	.input__focus-indicator {
+		background: #FD0;
+		height: 1px;
+		left: 50%;
+		margin-top: -2px;
+		position: relative;
+		width: 0;
+	}
+	:is(input, textarea):focus + .input__focus-indicator {
+		left: 0;
+		transition: .3s;
+		width: 100%;
+	}
+	textarea + .input__focus-indicator {
+		margin-top: -6px;
+	}

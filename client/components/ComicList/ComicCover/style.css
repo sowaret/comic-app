@@ -1,0 +1,86 @@
+.comic-cover {
+	margin-bottom: 80px;
+}
+.header + .comic-cover:not(.shelf) {
+	margin-top: 60px;
+}
+
+	.comic-cover__link {
+		display: block;
+	}
+
+		.comic-cover__banner {
+			width: 100%;
+			/* Style for alt text */
+			background: #444;
+			color: #FFF;
+			display: block;
+			min-height: 120px;
+		}
+
+		.comic-cover__decoration {
+			color: #666;
+			display: grid;
+			font-family: 'material icons';
+			font-size: 2rem;
+			grid-template-columns: 1fr min-content 1fr;
+			grid-gap: 20px;
+			margin-top: 1rem;
+			text-align: center;
+		}
+		.comic-cover__decoration::after,
+		.comic-cover__decoration::before {
+			background: #444;
+			content: '';
+			height: 1px;
+			margin-top: 17px;
+		}
+
+		.comic-cover__description {
+			font-family: 'Roboto Slab', serif;
+			font-size: 1.1rem;
+			line-height: 1.7rem;
+			margin: 0 auto 2.5rem;
+			text-align: justify;
+			width: 780px;
+		}
+
+		.comic-cover__link {
+			color: #FFF;
+			display: inline-grid;
+			grid-gap: 12px;
+			grid-template-columns: min-content min-content;
+			padding: 10px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+		.comic-cover__link:last-child {
+			margin-left: 15px;
+		}
+				
+			.comic-cover__link-icon {
+				font-family: 'material icons';
+			}
+
+		.comic-cover__links {
+			border-top: 1px solid #777;
+			display: grid;
+			grid-template-columns: min-content 1fr;
+			padding: 15px 12px 0px;
+		}
+
+			.comic-cover__info {
+				font-size: .9rem;
+				font-style: italic;
+				padding-top: 4px;
+				white-space: nowrap;
+			}
+
+				.comic-cover__info .comic-cover__link {
+					color: #BBB;
+				}
+
+			.comic-cover__read-links {
+				font-size: 1.2rem;
+				text-align: right;
+			}

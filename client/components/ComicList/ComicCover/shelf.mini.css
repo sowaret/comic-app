@@ -1,0 +1,49 @@
+.comic-list.mini {
+	margin-left: 107px;
+	text-align: left;
+}
+
+.comic-cover.mini {
+	margin: 0 3.2rem 0 0;
+	text-align: left;
+}
+
+.comic-cover.mini .comic-cover__banner {
+	height: 120px;
+	transition: .3s cubic-bezier(0.16, 1, 0.6, 1); /* short-end easeOutExpo */
+}
+.comic-cover.mini .comic-cover__main-link:hover .comic-cover__banner {
+	box-shadow: 0 4px 12px #000;
+	transform: scale(1.08);
+}
+
+.comic-cover.mini .comic-cover__decoration {
+	font-size: 1.2rem;
+	grid-gap: 10px;
+	margin-top: .7rem;
+}
+.comic-cover.mini .comic-cover__decoration::after,
+.comic-cover.mini .comic-cover__decoration::before {
+	margin-top: 10px;
+}
+
+.comic-cover.mini .comic-cover__title {
+	font-size: 1.1rem;
+	margin-top: .5rem;
+}
+
+/* "Last updated" */
+.comic-cover.mini .comic-cover__link.edit {
+	box-sizing: border-box;
+	font-size: .8rem;
+	text-align: center;
+	width: 100%;
+}
+
+.comic-cover.mini .comic-cover__links {
+	padding: 0;
+}
+
+.comic-cover.mini .comic-cover__link {
+	font-size: .9rem;
+}

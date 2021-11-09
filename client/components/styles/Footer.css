@@ -1,0 +1,26 @@
+html, body {
+	height: 100%;
+}
+
+	#root {
+		display: grid;
+		height: auto;
+		grid-template-rows: auto 1fr auto;
+		min-height: 100%;
+	}
+
+		.footer {
+			background: #1C1C1C;
+			border-top: 1px solid #2D2D2D;
+			color: #777;
+			font-family: 'roboto slab';
+			font-size: .85rem;
+			letter-spacing: 1px;
+			margin-top: 40px;
+			padding: 50px;
+			text-align: center;
+		}
+
+			.footer a {
+				color: #FD0;
+			}

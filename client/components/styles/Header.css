@@ -1,0 +1,38 @@
+.header {
+	border-bottom: 2px solid #444;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 1fr min-content 0;
+	padding: 40px 0 20px;
+}
+.header.sticky {
+	background: #222;
+	position: sticky;
+	top: 44px;
+	z-index: 1;
+}
+
+	.header__title {
+		font-family: 'roboto slab';
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+
+	.header__button {
+		background: #DDD;
+		border-radius: 50%;
+		box-sizing: border-box;
+		color: #000;
+		font-family: 'material icons';
+		font-size: 20px;
+		height: 36px;
+		padding-top: 7px;
+		text-align: center;
+		text-decoration: none;
+		transition: .1s;
+		width: 36px;
+	}
+	.header__button:focus,
+	.header__button:hover {
+		background: #FFF;
+	}

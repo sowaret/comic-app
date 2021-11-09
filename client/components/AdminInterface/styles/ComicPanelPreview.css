@@ -1,0 +1,43 @@
+.comic-panel-preview {
+	box-shadow: 0 0 7px #0006;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: 'drag static animated' 'drag transcript transcript';
+	grid-template-columns: min-content 1fr 1fr;
+	margin-bottom: 16px;
+	padding: 16px 10px;
+	position: relative;
+}
+
+	.comic-panel-preview__drag {
+		cursor: ns-resize;
+		display: grid;
+		font-family: 'material icons';
+		font-size: 1.5rem;
+		grid-area: drag;
+		grid-template-rows: 1fr auto 1fr;
+	}
+		.comic-panel-preview__drag::after {
+			content: 'reorder';
+			grid-row-start: 2;
+		}
+
+	.comic-panel-preview img {
+		width: 100%;
+	}
+	.static-version {
+		grid-area: static;
+	}
+	.animated-version {
+		grid-area: animated;
+	}
+
+	.comic-panel-preview__transcript {
+		grid-area: transcript;
+		margin: 0 auto;
+	}
+
+	.add-animated.file-input-dropzone {
+		margin: 0;
+		padding: 93px 20px;
+	}

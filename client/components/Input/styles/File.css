@@ -1,0 +1,43 @@
+.file-input-dropzone {
+	border: 2px dashed #555;
+	box-sizing: border-box;
+	color: #DDD;
+	cursor: pointer;
+	font-size: 1.1rem;
+	margin-top: 10px;
+	padding: 20px;
+	text-align: center;
+	transition: .15s;
+	width: 100%;
+}
+.file-input-dropzone:active,
+.file-input-dropzone:focus,
+.dragging.file-input-dropzone {
+	border-color: #FD0;
+	outline: 0;
+}
+	.file-input__drag-helper {
+		transition: .15s;
+	}
+	.dragging .file-input__drag-helper {
+		margin: 16px 0 -8px;
+	}
+
+	.file-input__click-helper {
+		color: #999;
+		font-size: 1rem;
+		height: 18px;
+		margin-top: 8px;
+		transition: .15s;
+	}
+	.dragging.file-input-dropzone .file-input__click-helper {
+		margin: 0;
+		opacity: 0;
+	}
+
+	.file-input__animated-helper {
+		color: #999;
+		font-size: .8rem;
+		font-style: italic;
+		margin-top: 18px;
+	}

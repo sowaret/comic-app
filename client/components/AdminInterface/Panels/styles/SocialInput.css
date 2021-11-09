@@ -1,0 +1,17 @@
+.social-input {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 54px 1fr 1fr 3fr;
+	margin-top: 15px;
+}
+.social-input:last-child {
+	margin-bottom: 20px;
+}
+
+	.social-input__site-logo {
+		background: no-repeat 50% / 2rem;
+	}
+
+	.social-input .input {
+		margin: 0;
+	}

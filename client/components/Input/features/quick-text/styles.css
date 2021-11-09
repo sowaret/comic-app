@@ -1,0 +1,35 @@
+.quick-text-panel {
+	background: #181818;
+	border-radius: 0 0 4px 4px;
+	left: -9999px;
+	min-width: 205px;
+	opacity: 0;
+	position: absolute;
+	transform: translateY(6px);
+	transition: opacity .15s, transform .15s;
+}
+.input.focus .quick-text-panel {
+	left: 0;
+	opacity: 1;
+	transform: translateY(1px);
+}
+
+	/* .quick-text-panel__options */
+
+		.quick-text-panel__option {
+			color: #FD0;
+			cursor: pointer;
+			display: inline-block;
+			padding: 10px 14px;
+		}
+		.quick-text-panel__option:hover {
+			background: #282828;
+		}
+
+	.quick-text-panel__info-text {
+		font-size: .8rem;
+		padding: 8px 14px;
+	}
+	.quick-text-panel__info-text.empty {
+		color: #666;
+	}

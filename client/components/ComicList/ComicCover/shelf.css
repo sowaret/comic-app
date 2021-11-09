@@ -1,0 +1,95 @@
+.comic-cover.shelf {
+	display: inline-block;
+	margin-right: 4rem;
+	vertical-align: top;
+	width: min-content;
+}
+.comic-cover.shelf:last-child {
+	margin-right: 0;
+}
+
+	.comic-cover.shelf .comic-cover__main-link {
+		display: block;
+		position: relative;
+		text-decoration: none;
+	}
+
+		.comic-cover.shelf .comic-cover__banner {
+			margin: 0 auto;
+			width: auto;
+		}
+
+		.comic-cover.shelf .comic-cover__description {
+			background: #000B;
+			box-sizing: border-box;
+			color: #FFF;
+			display: grid;
+			font-size: .9rem;
+			grid-template-rows: 1fr auto 1fr;
+			height: 100%;
+			left: 0;
+			line-height: 1.6rem;
+			opacity: 0;
+			overflow: hidden;
+			padding: 0 18px;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+		.comic-cover.shelf .comic-cover__description,
+		.comic-cover.shelf .comic-cover__description p {
+			transition: .6s cubic-bezier(0.16, 1, 0.3, 1); /* easeOutExpo */
+		}
+
+		.comic-cover.shelf .comic-cover__description-paragraphs {
+			grid-row-start: 2;
+		}
+		.comic-cover.shelf .comic-cover__description p {
+			padding-top: 10px;
+		}
+		/* On description hover */
+		.comic-cover.shelf .comic-cover__main-link:hover .comic-cover__description {
+			opacity: 1;
+		}
+		.comic-cover.shelf .comic-cover__main-link:hover p {
+			padding: 0;
+		}
+
+	.comic-cover__title {
+		color: #999;
+		font-family: 'roboto slab';
+		font-size: 1.3rem;
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	.comic-cover.shelf .comic-cover__link.edit {
+		font-family: 'roboto slab';
+		font-size: .9rem;
+		font-style: italic;
+		grid-template-columns: 1fr;
+	}
+		/* Hide "Last updated" pencil icon */
+		.comic-cover.shelf .comic-cover__link.edit .comic-cover__link-icon {
+			display: none;
+		}
+
+	.comic-cover.shelf .comic-cover__links {
+		border: none;
+		display: block;
+	}
+
+		.comic-cover.shelf .comic-cover__read-links {
+			text-align: center;
+		}
+
+		.comic-cover.shelf .comic-cover__link {
+			color: #999;
+			font-size: 1rem;
+		}
+		.comic-cover.shelf .comic-cover__read-links .comic-cover__link:hover {
+			color: #FFF;
+		}
+		.comic-cover.shelf .comic-cover__link:last-child {
+			margin: 0;
+		}

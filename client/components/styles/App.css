@@ -1,0 +1,128 @@
+html,
+body {
+	background: #222;
+	color: #FFF;
+	font-family: Roboto, sans-serif;
+	user-select: none;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+	width: .8vw;
+}
+
+html::-webkit-scrollbar-track {
+	background: #222;
+	border-left: 1px solid #333;
+}
+html::-webkit-scrollbar-thumb {
+	background: #333;
+}
+html::-webkit-scrollbar-thumb:hover {
+	background: #444;
+}
+
+/* Element styles */
+button,
+input,
+textarea {
+	background: #383838;
+	border: 0;
+	box-sizing: border-box;
+	color: #EEE;
+	outline: 0;
+	padding: 8px;
+}
+
+input,
+textarea {
+	border-bottom: 1px solid #555;
+	border-radius: 4px 4px 0 0;
+}
+:is(input, textarea):hover {
+	background: #3A3A3A;
+}
+:is(input, textarea):focus {
+	background: #3F3F3F;
+	border-bottom-color: #FD0;
+}
+
+button {
+	cursor: pointer;
+}
+button:disabled {
+	cursor: default;
+	opacity: .5;
+}
+
+/* Dynamic buttons */
+:is(a, button).dynamic {
+	background: #FD0;
+	box-shadow: 0 1px 5px #0008;
+	color: #000;
+	transition: .25s;
+}
+/* Disabled */
+:is(a, button).dynamic:disabled {
+	background: #C7AC00;
+	box-shadow: none;
+	cursor: default;
+}
+/* Focus/hover */
+:is(a, button).dynamic:not(:disabled):is(:focus, :hover) {
+	background: #F6E900;
+	box-shadow: 0 4px 8px #0006;
+}
+/* Mousedown */
+:is(a, button).dynamic:not(:disabled):active {
+	background: #FCF267;
+	box-shadow: 0 10px 20px #0005;
+}
+
+button.submit {
+	border-radius: 2px;
+	font-size: .9rem;
+	left: 100%;
+	padding: 12px 24px;
+	position: relative;
+	text-transform: uppercase;
+	transform: translateX(-100%);
+}
+.form--center button.submit {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+textarea {
+	min-height: 80px;
+	resize: vertical;
+	width: 570px;
+}
+
+/* end element styles */
+
+/* Class styles */
+.align-center {
+	text-align: center;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.content-container {
+	margin: 0 auto;
+	width: 950px;
+}
+
+	.welcome-header {
+		color: #888;
+		font-family: 'roboto slab';
+		font-size: 4rem;
+		margin: 5rem 0;
+		text-align: center;
+	}
+
+/* end class styles */

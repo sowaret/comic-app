@@ -1,0 +1,77 @@
+.top-menu {
+	background: center / cover;
+	display: grid;
+	font-family: 'roboto slab';
+	grid-template-columns: 1fr min-content;
+	padding-top: 150px;
+	position: sticky;
+	top: -140px;
+	z-index: 10;
+}
+
+	.top-menu__link {
+		color: #FFF;
+		display: inline-block;
+		font-size: 1.1rem;
+		margin-left: 10px;
+		padding: 12px 30px 22px;
+		position: relative;
+		text-decoration: none;
+	}
+
+		.top-menu__link-indicator {
+			background: #FFF9;
+			bottom: 10px;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 50%;
+			position: absolute;
+			transition: .4s cubic-bezier(0.16, 1, 0.3, 1); /* easeOutExpo */
+			width: 0;
+		}
+
+		.top-menu__link:is(.active, :not(.active):hover) .top-menu__link-indicator {
+			left: 0;
+			width: 100%;
+		}
+
+	.top-menu__social-links {
+		padding: 2px 12px 0;
+		white-space: nowrap;
+	}
+
+		.top-menu__social-link {
+			background: no-repeat center / 18px;
+			border: 1px solid transparent;
+			border-radius: 50%;
+			box-sizing: border-box;
+			display: inline-block;
+			height: 40px;
+			margin-left: 4px;
+			transition: .2s;
+			width: 40px;
+		}
+		.top-menu__social-link:hover {
+			background-color: #FFF1;
+			border-color: #FFF4;
+		}
+
+/* Dropdown portals */
+.top-menu__dropdown {
+	background: #181818;
+	left: -9999px;
+	opacity: 0;
+	padding: 2rem 0;
+	position: absolute;
+	top: 204px; /* Below top menu */
+	transform: translateY(-20px);
+	transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1), opacity .3s cubic-bezier(0.16, 1, 0.3, 1);
+	width: 100%;
+	z-index: 9; /* Beneath top menu */
+}
+.top-menu__dropdown.visible {
+	left: 0;
+	opacity: 1;
+	transform: translateY(0);
+}
